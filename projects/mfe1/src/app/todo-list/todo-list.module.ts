@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoListComponent } from './todo-list.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+// import { BrowserModule } from '@angular/platform-browser';
+import { TodoListRoutingModule } from './todo-list-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
-    RouterModule.forChild([{
-      path: '', component: TodoListComponent
-    }])
+    // BrowserModule,
+    TodoListRoutingModule
   ],
-  declarations: [TodoListComponent]
+  declarations: [TodoListComponent],
+  exports:[TodoListComponent]
 })
 export class TodoListModule { }

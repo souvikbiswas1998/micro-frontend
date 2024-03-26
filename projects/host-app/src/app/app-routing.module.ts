@@ -9,8 +9,8 @@ const routes: Routes = [
   {
     path: "mfe1", loadChildren: () => loadRemoteModule({
       remoteEntry: "http://localhost:4201/remoteEntry.js",
-      remoteName: "mfe1", exposedModule: "./TodoListModule"
-    }).then((m) => m.TodoListModule).catch((error) => console.error(error))
+      remoteName: "mfe1", exposedModule: "./AppModule"
+    }).then((m) => m.AppModule).catch((error) => console.error(error))
   },
 ];
 

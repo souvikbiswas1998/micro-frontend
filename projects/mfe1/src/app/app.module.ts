@@ -14,7 +14,9 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     TodoListModule,
-    RouterModule
+    // RouterModule.forChild([{
+    //   path: '', component: AppComponent
+    // }])
   ],
   providers: [],
   bootstrap: [AppComponent]
