@@ -38,6 +38,7 @@ module.exports = {
       // For hosts (please adjust)
       remotes: {
         "mfe1": "mfe1@http://localhost:4201/remoteEntry.js",
+        "commonService": "commonService@http://localhost:4300/remoteEntry.js",
 
       },
 

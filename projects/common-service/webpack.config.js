@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "mfe1",
+    uniqueName: "commonService",
     publicPath: "auto",
     scriptType: "text/javascript"
   },
@@ -27,19 +27,20 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // library: { type: "module" },
-
       // For remotes (please adjust)
-      name: "mfe1",
+      name: "commonService",
       filename: "remoteEntry.js",
       exposes: {
-        './AppModule': './projects/mfe1/src/app/app.module.ts',
+        './SharedService': './projects/common-service/src/app/shared.service.ts',
+        // './AppModule': './projects/common-service/src/app/app.module.ts',
       },
 
       // For hosts (please adjust)
-      remotes: {
-        "commonService": "commonService@http://localhost:4300/remoteEntry.js",
-      },
+      // remotes: {
+      //     "hostApp": "http://localhost:4200/remoteEntry.js",
+      //     "mfe1": "http://localhost:4201/remoteEntry.js",
+
+      // },
 
       shared: share({
         "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
