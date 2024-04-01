@@ -1,4 +1,3 @@
-import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,16 +10,6 @@ export class AppComponent {
   dataFromRemote: any;
 
   constructor() {
-    loadRemoteModule({
-      remoteEntry: 'http://localhost:4300/remoteEntry.js',
-      remoteName: 'commonService', exposedModule: "./SharedService"
-      // Name from remotes in host's webpack.config.js
-    }).then(async m => {
-      const shared = new m.SharedService();
-      this.dataFromRemote = shared.sharedData(); // Call service methods
-      setTimeout(() => shared.sendData("souvik"), 1000)
-      shared.sendData("prem")
-    })
 
   }
 }
