@@ -43,5 +43,4 @@ Thumbs.db
 package-lock.json
 projects/common-lib/node_modules/
 
-projects/mfe1/node_modules/
-projects/host-app/node_modules/
+projects/**/node_modules/
