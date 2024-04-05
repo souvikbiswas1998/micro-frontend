@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonLibService } from 'common-lib';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,12 +6,6 @@ import { CommonLibService } from 'common-lib';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-
-  constructor(private service: CommonLibService) {
-    service.readData().subscribe((data)=>{
-      console.log(data)
-    })
-  }
 
   ngOnInit() {
   }

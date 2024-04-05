@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonLibService } from 'common-lib';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +7,9 @@ import { CommonLibService } from 'common-lib';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service: CommonLibService) {
-    service.commonData("data from lib")
-  }
-
 
   ngOnInit() {
-   
+
   }
 
 }
