@@ -10,7 +10,5 @@ export class AppComponent {
   dataFromRemote: any;
 
   constructor() {
-  
-
   }
 }
