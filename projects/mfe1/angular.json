@@ -31,7 +31,7 @@
 							"src/styles.scss"
 						],
 						"scripts": [],
-						"extraWebpackConfig": "projects/mfe1/webpack.config.js",
+						"extraWebpackConfig": "./webpack.config.js",
 						"commonChunk": false
 					},
 					"configurations": {
@@ -55,7 +55,7 @@
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
+							"extraWebpackConfig": "./webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -73,7 +73,7 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "mfe1:build:production",
-							"extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
+							"extraWebpackConfig": "./webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "mfe1:build:development"
@@ -83,14 +83,14 @@
 					"options": {
 						"port": 4201,
 						"publicHost": "http://localhost:4201",
-						"extraWebpackConfig": "projects/mfe1/webpack.config.js"
+						"extraWebpackConfig": "./webpack.config.js"
 					}
 				},
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
 						"browserTarget": "mfe1:build",
-						"extraWebpackConfig": "projects/mfe1/webpack.config.js"
+						"extraWebpackConfig": "./webpack.config.js"
 					}
 				},
 				"test": {
