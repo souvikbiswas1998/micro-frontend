@@ -11,7 +11,10 @@ export class AppComponent {
   dataFromRemote: any;
 
   constructor(service: CommonLibService) {
-    service.commonData("data from lib")
+    service.commonData("data from lib");
+    service.readData().subscribe((data: any) => {
+      console.log("host " + data)
+    })
   }
 }
 

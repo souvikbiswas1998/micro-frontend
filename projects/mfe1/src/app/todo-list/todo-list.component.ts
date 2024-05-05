@@ -9,6 +9,7 @@ export class TodoListComponent implements OnInit {
 
   constructor(private service: CommonLibService) { }
   ngOnInit() {
+    this.service.commonData("data from mfe1");
     this.service.readData().subscribe((data: any) => {
       console.log(data)
     })

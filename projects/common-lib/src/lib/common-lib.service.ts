@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 })
 export class CommonLibService {
 
-  subject: BehaviorSubject<any> = new BehaviorSubject("souvik")
+  subject: BehaviorSubject<any> = new BehaviorSubject("souvik " + new Date())
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class CommonLibService {
     return this.subject.next(data)
   }
 
-  readData(){
-   return this.subject.asObservable()
+  readData() {
+    return this.subject.asObservable()
   }
 }
