@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonLibService } from '../../../common-lib/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ export class AppComponent {
   title = 'host-app';
   dataFromRemote: any;
 
-  constructor() {
-
+  constructor(service: CommonLibService) {
+    service.commonData("data from lib")
   }
 }
 

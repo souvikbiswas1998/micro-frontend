@@ -8,9 +8,9 @@ import { TodoListRoutingModule } from './todo-list-routing.module';
   imports: [
     CommonModule,
     // BrowserModule,
-    TodoListRoutingModule
+    TodoListRoutingModule,
   ],
   declarations: [TodoListComponent],
-  exports:[TodoListComponent]
+  exports: [TodoListComponent]
 })
 export class TodoListModule { }

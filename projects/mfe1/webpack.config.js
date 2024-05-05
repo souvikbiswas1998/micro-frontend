@@ -30,6 +30,9 @@ module.exports = {
       // library: { type: "module" },
 
       // For remotes (please adjust)
+      remotes: {
+        "commonService": "commonService@http://localhost:4300/remoteEntry.js",
+      },
       name: "mfe1",
       filename: "remoteEntry.js",
       exposes: {
