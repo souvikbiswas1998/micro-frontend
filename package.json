@@ -3,11 +3,13 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "common-lib": "cd projects/common-lib && npm run-script start",
+        "common-lib": "cd projects/common-lib && npm run-script build",
         "host": "cd projects/host-app && npm run-script start",
         "mfe1": "cd projects/mfe1 && npm run-script start",
         "start": "concurrently \"npm run host\" \"npm run mfe1\"",
-        "install-packages": "concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\""
+        "install-common-lib-all": "concurrently \"cd projects/host-app && npm run-script install-common-lib\" \"cd projects/mfe1 && npm run-script install-common-lib\"",
+        "start-all": "npm run common-lib && npm run install-common-lib-all && npm run start",
+        "install-packages": "concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\" \"cd projects/mfe1 && npm install && npm run-script install-common-lib\""
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
