@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'platform'
 })
 export class CommonLibService {
 
-  subject: BehaviorSubject<any> = new BehaviorSubject("souvik")
+  subject: BehaviorSubject<any> = new BehaviorSubject("souvik " + new Date())
 
   constructor() { }
 
@@ -14,7 +15,7 @@ export class CommonLibService {
     return this.subject.next(data)
   }
 
-  readData(){
-   return this.subject.asObservable()
+  readData(): Observable<any> {
+    return this.subject.asObservable()
   }
 }

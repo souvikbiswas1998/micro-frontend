@@ -1,13 +1,16 @@
 {
-  "name": "common-lib",
-  "version": "1.0.1",
+  "name": "mfe1",
+  "version": "0.0.0",
   "scripts": {
-    "build": "ng build common-lib"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "install-common-lib": "npm install ../../dist/common-lib",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
-  "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
-  },
+  "private": true,
   "dependencies": {
     "@angular-architects/module-federation": "^14.3.14",
     "@angular/animations": "^14.2.0",
@@ -18,6 +21,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "common-lib": "file:../../dist/common-lib",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
