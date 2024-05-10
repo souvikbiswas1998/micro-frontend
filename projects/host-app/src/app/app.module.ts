@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { CommonLibModule } from 'common-lib';
+// import { CommonLibModule, CommonLibService } from 'common-lib';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,9 @@ import { CommonLibModule } from 'common-lib';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    CommonLibModule
+    // CommonLibModule.forRoot({ userName: 'Souvik Anu' })
   ],
-  providers: [],
+  // providers: [{ provide: CommonLibService, useValue: { userName: 'Souvik Anu' } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

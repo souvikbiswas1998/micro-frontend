@@ -45,6 +45,7 @@ module.exports = {
         "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
         "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
         "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "common-lib": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
         ...sharedMappings.getDescriptors()
       })
