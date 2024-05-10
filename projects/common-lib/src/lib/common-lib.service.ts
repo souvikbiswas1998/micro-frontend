@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class CommonLibService {
     return this.subject.next(data)
   }
 
-  readData() {
+  readData(): Observable<any> {
     return this.subject.asObservable()
   }
 }
