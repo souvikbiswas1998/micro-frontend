@@ -9,7 +9,7 @@
         "start": "concurrently \"npm run host\" \"npm run mfe1\"",
         "install-common-lib-all": "concurrently \"cd projects/host-app && npm run-script install-common-lib\" \"cd projects/mfe1 && npm run-script install-common-lib\"",
         "start-all": "npm run common-lib && npm run install-common-lib-all && npm run start",
-        "install-packages": "concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\" \"cd projects/mfe1 && npm install && npm run-script install-common-lib\""
+        "install-all-packages": "npm install && cd projects/common-lib && npm install && npm run-script build && concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\" \"cd projects/mfe1 && npm install && npm run-script install-common-lib\""
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
