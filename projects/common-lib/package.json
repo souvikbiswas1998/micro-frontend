@@ -1,6 +1,9 @@
 {
   "name": "common-lib",
   "version": "0.0.1",
+  "scripts": {
+    "build": "ng build common-lib"
+  },
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"

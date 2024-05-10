@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonLibService } from '../../../common-lib/src/public-api';
+import { CommonLibService } from 'common-lib';
 
 @Component({
   selector: 'app-root',

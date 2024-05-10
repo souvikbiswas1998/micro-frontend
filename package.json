@@ -1,0 +1,15 @@
+{
+    "name": "mfe1",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "common-lib": "cd projects/common-lib && npm run-script start",
+        "host": "cd projects/host-app && npm run-script start",
+        "mfe1": "cd projects/mfe1 && npm run-script start",
+        "start": "concurrently \"npm run host\" \"npm run mfe1\"",
+        "install-packages": "concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
