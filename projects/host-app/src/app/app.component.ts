@@ -13,8 +13,8 @@ export class AppComponent implements OnDestroy {
   sub!: Subscription;
 
   constructor(private service: CommonLibService) {
-    service.commonData("data from lib");
-    this.sub = service.readData().subscribe((data: any) => {
+    service.commonData({ source: 'host', destination: 'host', data: 'host test data' });
+    this.sub = service.readData('host').subscribe((data: any) => {
       console.log("host", data)
     })
   }
@@ -23,8 +23,8 @@ export class AppComponent implements OnDestroy {
     throw new Error('Method not implemented.');
   }
 
-  call() {
-    this.service.commonData(+new Date())
+  call(destination = '**') {
+    this.service.commonData({ source: 'host', destination: destination, data: +new Date() })
   }
 }
 

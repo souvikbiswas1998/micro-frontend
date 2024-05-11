@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-// import { Observable } from 'rxjs/internal/Observable';
-// import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { Observable } from 'rxjs/internal/Observable';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { filter } from 'rxjs/internal/operators/filter';
 
 @Injectable({
   providedIn: 'platform'
 })
 export class CommonLibService {
 
-  subject: BehaviorSubject<any> = new BehaviorSubject("souvik " + +new Date())
+  subject: BehaviorSubject<{ source: string, destination: string, data: any }> = new BehaviorSubject({ source: 'common-lib', destination: '**', data: 'test' })
 
   constructor() { }
 
-  public commonData(data: any) {
+  public commonData(data: { source: string, destination: string, data: any }) {
     return this.subject.next(data)
   }
 
-  public readData(): Observable<any> {
-    return this.subject.asObservable()
+  public readData(host: any): Observable<any> {
+    return this.subject.asObservable().pipe(filter(d => (d.destination == '**' || d.destination == host)))
   }
 }

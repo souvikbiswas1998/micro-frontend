@@ -6,6 +6,6 @@
   },
   "allowedNonPeerDependencies": [
     "@angular/core",
-    "rxjs"
+    "rxjs/internal"
   ]
 }
