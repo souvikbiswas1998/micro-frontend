@@ -5,15 +5,7 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-    "@angular-architects/module-federation",
-    "@angular/animations",
-    "@angular/common",
-    "@angular/compiler",
     "@angular/core",
-    "@angular/forms",
-    "@angular/platform-browser",
-    "@angular/router",
-    "rxjs",
-    "zone.js"
+    "rxjs"
   ]
 }

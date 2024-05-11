@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit, OnDestroy {
-  sub!: Subscription;
+  sub!: any;
 
   constructor(private service: CommonLibService) { }
   ngOnDestroy(): void {
@@ -16,7 +16,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.service.commonData("data from mfe1");
     this.sub = this.service.readData().subscribe((data: any) => {
-      console.log(data)
+      console.log("mfe1", data)
     })
   }
 

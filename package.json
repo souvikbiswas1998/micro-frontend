@@ -1,6 +1,6 @@
 {
-    "name": "mfe1",
-    "version": "0.0.0",
+    "name": "micro-frontend",
+    "version": "1.0.1",
     "private": true,
     "scripts": {
         "common-lib": "cd projects/common-lib && npm run-script build",

@@ -1,19 +1,18 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonLibComponent } from './common-lib.component';
 import { CommonLibService } from './common-lib.service';
 
 
 
 @NgModule({
   declarations: [
-    CommonLibComponent
+    // CommonLibComponent   //if we use component then we have to install zone.js@0.11.4
   ],
   imports: [
     // CommonModule
   ],
   providers: [CommonLibService],
   exports: [
-    CommonLibComponent
+    // CommonLibComponent
   ]
 })
 export class CommonLibModule {
